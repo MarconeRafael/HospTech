@@ -1,19 +1,38 @@
+# Definir a versão mínima do CMake
 cmake_minimum_required(VERSION 3.10)
 
-# Define o nome do projeto
-project(hosptech)
+# Definir o nome do projeto
+project(HospTech)
 
-# Define a versão do C++ a ser utilizada
-set(CMAKE_CXX_STANDARD 11)
+# Definir o padrão C++ a ser usado (C++17, por exemplo)
+set(CMAKE_CXX_STANDARD 17)
 
-# Adiciona o diretório include ao caminho de busca do compilador
+# Incluir o diretório de cabeçalhos
 include_directories(include)
-include_directories(data)
 
-# Adiciona os arquivos de origem do projeto
-add_executable(hosptech
+# Adicionar os arquivos de código-fonte
+set(SOURCES
+    src/pacientes.cpp
+    src/financeiro.cpp
+    src/inventario.cpp
+    src/agendamentos.cpp
+    src/leitos.cpp
+    src/prescricao.cpp
+    src/usuario.cpp
+    src/relatorios.cpp
+    src/notificacoes.cpp
     src/main.cpp
-
 )
 
+# Definir o diretório de saída para os binários
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
+# Criar o executável final a partir dos arquivos fonte
+add_executable(hosptech ${SOURCES})
+
+# Se estiver usando C++17 ou superior, pode adicionar a flag de compilação
+target_compile_options(hosptech PRIVATE -Wall -Wextra)
+
+# Se for necessário linkar bibliotecas externas (por exemplo, SQLite)
+# find_package(SQLite3 REQUIRED)
+# target_link_libraries(hosptech PRIVATE SQLite3::SQLite3)

@@ -71,7 +71,7 @@ hosptech/
 4. Execute o programa:
 
    ```bash
-   ./build/hosptech
+   ./build/bin/hosptech
    ```
 
 ## Estrutura de Dados

@@ -105,7 +105,7 @@ Preencha os itens que você implementou, indicando qual a nota esperada para cad
 
 | **Item**                                           | **Feito** | **Ações Propostas**                                                                            |
 |----------------------------------------------------|-----------|-----------------------------------------------------------------------------------------------|
-| Gerenciar registro de pacientes                    | Não       | Criar classes `Paciente` e `GestorPacientes`. Implementar funções para adicionar, editar e listar. |
+| Gerenciar registro de pacientes                    | sim       | Criar classes `Paciente` e `GestorPacientes`. Implementar funções para adicionar, editar e listar. |
 | Gerenciar registro de faturamento                  | Não       | Criar classe `Financeiro`. Gerenciar cobranças e pagamentos por paciente.                     |
 | Gerenciar registro de inventário médico            | Não       | Criar classe `Inventario`. Registrar, buscar e atualizar itens do estoque.                    |
 | Logins de diferentes níveis de acesso              | Não       | Criar classe `Usuario` com níveis de acesso e autenticação.                                    |

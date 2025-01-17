@@ -87,7 +87,7 @@
 # Author(s)
 Marcone Rafael do Nascimento Junior - marconerafael2017@gmail.com
 
-José Wenderson da Cunha Silva - 
+José Wenderson da Cunha Silva - wendersoncunha176@gmail.com
 Roniel Santos de Lima  - 
 # Problems found or limitations
 

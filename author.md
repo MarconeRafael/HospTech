@@ -137,4 +137,4 @@ cmake -S . -B build
 
 cmake --build build
 
-./build/hosptech
+./bin/hosptech

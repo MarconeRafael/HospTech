@@ -13,16 +13,9 @@ include_directories(include)
 # Adicionar os arquivos de código-fonte
 set(SOURCES
     src/pacientes.cpp
-    #src/menupacientes.cpp        # Adicionado o arquivo de menu de pacientes
-    #src/exibirMenuPrincipal.cpp  # Adicionado o arquivo de menu principal
-    # src/financeiro.cpp        # Comentado conforme solicitado
-    # src/inventario.cpp        # Comentado conforme solicitado
-    # src/agendamentos.cpp      # Comentado conforme solicitado
-    # src/leitos.cpp            # Comentado conforme solicitado
-    # src/prescricao.cpp       # Comentado conforme solicitado
-    # src/usuario.cpp          # Comentado conforme solicitado
-    # src/relatorios.cpp       # Comentado conforme solicitado
-    # src/notificacoes.cpp     # Comentado conforme solicitado
+    src/menupacientes.cpp
+    src/menuprincipal.cpp
+    src/usuario.cpp
     src/main.cpp
 )
 

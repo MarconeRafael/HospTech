@@ -1,5 +1,7 @@
 #include "usuario.h"
 #include <iostream>
+#include <vector>
+#include <string>
 
 // Definindo o banco de usuários
 std::vector<Usuario> banco_de_usuarios = {
@@ -29,7 +31,7 @@ bool Usuario::validar_login(const std::string& username, const std::string& pass
     return (username == nome_usuario && password == senha);
 }
 
-// Definição da função autenticar_usuario aqui
+// Função para autenticar usuário
 Usuario* autenticar_usuario(std::string username, std::string password) {
     for (auto& usuario : banco_de_usuarios) {
         if (usuario.validar_login(username, password)) {
@@ -37,4 +39,20 @@ Usuario* autenticar_usuario(std::string username, std::string password) {
         }
     }
     return nullptr; // Caso o usuário não seja encontrado
+}
+
+// Função para cadastrar um novo usuário
+bool cadastrar_usuario(std::string nome, std::string senha, NivelAcesso nivel) {
+    // Verificar se o nome de usuário já existe
+    for (const auto& usuario : banco_de_usuarios) {
+        if (usuario.get_nome_usuario() == nome) {
+            std::cout << "Erro: Usuário já existe!" << std::endl;
+            return false; // Não permite cadastrar o usuário se já existir
+        }
+    }
+
+    // Caso o nome não exista, adiciona o novo usuário ao banco
+    banco_de_usuarios.push_back(Usuario(nome, senha, nivel));
+    std::cout << "Usuário cadastrado com sucesso!" << std::endl;
+    return true;
 }

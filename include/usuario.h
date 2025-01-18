@@ -33,7 +33,8 @@ public:
 
 extern std::vector<Usuario> banco_de_usuarios; // Declaração do vetor global
 
-// Declare apenas a assinatura da função aqui
+// Declaração das funções de autenticação e cadastro
 Usuario* autenticar_usuario(std::string username, std::string password);
+bool cadastrar_usuario(std::string nome, std::string senha, NivelAcesso nivel);
 
 #endif // USUARIO_H

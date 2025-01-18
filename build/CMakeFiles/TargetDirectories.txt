@@ -1,3 +1,0 @@
-/home/m/lp1/HospTech/build/CMakeFiles/hosptech.dir
-/home/m/lp1/HospTech/build/CMakeFiles/edit_cache.dir
-/home/m/lp1/HospTech/build/CMakeFiles/rebuild_cache.dir

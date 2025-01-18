@@ -81,12 +81,12 @@ clean: CMakeFiles/hosptech.dir/clean
 CMakeFiles/hosptech.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hosptech.dir/build.make CMakeFiles/hosptech.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hosptech.dir/build.make CMakeFiles/hosptech.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/m/lp1/HospTech/build/CMakeFiles --progress-num=1,2,3 "Built target hosptech"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/m/lp1/HospTech/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target hosptech"
 .PHONY : CMakeFiles/hosptech.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/hosptech.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/m/lp1/HospTech/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/m/lp1/HospTech/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/hosptech.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/m/lp1/HospTech/build/CMakeFiles 0
 .PHONY : CMakeFiles/hosptech.dir/rule

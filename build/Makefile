@@ -153,6 +153,54 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hosptech.dir/build.make CMakeFiles/hosptech.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/menupacientes.o: src/menupacientes.cpp.o
+.PHONY : src/menupacientes.o
+
+# target to build an object file
+src/menupacientes.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hosptech.dir/build.make CMakeFiles/hosptech.dir/src/menupacientes.cpp.o
+.PHONY : src/menupacientes.cpp.o
+
+src/menupacientes.i: src/menupacientes.cpp.i
+.PHONY : src/menupacientes.i
+
+# target to preprocess a source file
+src/menupacientes.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hosptech.dir/build.make CMakeFiles/hosptech.dir/src/menupacientes.cpp.i
+.PHONY : src/menupacientes.cpp.i
+
+src/menupacientes.s: src/menupacientes.cpp.s
+.PHONY : src/menupacientes.s
+
+# target to generate assembly for a file
+src/menupacientes.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hosptech.dir/build.make CMakeFiles/hosptech.dir/src/menupacientes.cpp.s
+.PHONY : src/menupacientes.cpp.s
+
+src/menuprincipal.o: src/menuprincipal.cpp.o
+.PHONY : src/menuprincipal.o
+
+# target to build an object file
+src/menuprincipal.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hosptech.dir/build.make CMakeFiles/hosptech.dir/src/menuprincipal.cpp.o
+.PHONY : src/menuprincipal.cpp.o
+
+src/menuprincipal.i: src/menuprincipal.cpp.i
+.PHONY : src/menuprincipal.i
+
+# target to preprocess a source file
+src/menuprincipal.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hosptech.dir/build.make CMakeFiles/hosptech.dir/src/menuprincipal.cpp.i
+.PHONY : src/menuprincipal.cpp.i
+
+src/menuprincipal.s: src/menuprincipal.cpp.s
+.PHONY : src/menuprincipal.s
+
+# target to generate assembly for a file
+src/menuprincipal.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hosptech.dir/build.make CMakeFiles/hosptech.dir/src/menuprincipal.cpp.s
+.PHONY : src/menuprincipal.cpp.s
+
 src/pacientes.o: src/pacientes.cpp.o
 .PHONY : src/pacientes.o
 
@@ -177,6 +225,30 @@ src/pacientes.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hosptech.dir/build.make CMakeFiles/hosptech.dir/src/pacientes.cpp.s
 .PHONY : src/pacientes.cpp.s
 
+src/usuario.o: src/usuario.cpp.o
+.PHONY : src/usuario.o
+
+# target to build an object file
+src/usuario.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hosptech.dir/build.make CMakeFiles/hosptech.dir/src/usuario.cpp.o
+.PHONY : src/usuario.cpp.o
+
+src/usuario.i: src/usuario.cpp.i
+.PHONY : src/usuario.i
+
+# target to preprocess a source file
+src/usuario.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hosptech.dir/build.make CMakeFiles/hosptech.dir/src/usuario.cpp.i
+.PHONY : src/usuario.cpp.i
+
+src/usuario.s: src/usuario.cpp.s
+.PHONY : src/usuario.s
+
+# target to generate assembly for a file
+src/usuario.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hosptech.dir/build.make CMakeFiles/hosptech.dir/src/usuario.cpp.s
+.PHONY : src/usuario.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -189,9 +261,18 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/menupacientes.o"
+	@echo "... src/menupacientes.i"
+	@echo "... src/menupacientes.s"
+	@echo "... src/menuprincipal.o"
+	@echo "... src/menuprincipal.i"
+	@echo "... src/menuprincipal.s"
 	@echo "... src/pacientes.o"
 	@echo "... src/pacientes.i"
 	@echo "... src/pacientes.s"
+	@echo "... src/usuario.o"
+	@echo "... src/usuario.i"
+	@echo "... src/usuario.s"
 .PHONY : help
 
 

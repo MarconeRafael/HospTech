@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/hosptech.dir/src/pacientes.cpp.o CMakeFiles/hosptech.dir/src/main.cpp.o -o bin/hosptech 
+/usr/bin/c++ CMakeFiles/hosptech.dir/src/pacientes.cpp.o CMakeFiles/hosptech.dir/src/menupacientes.cpp.o CMakeFiles/hosptech.dir/src/menuprincipal.cpp.o CMakeFiles/hosptech.dir/src/usuario.cpp.o CMakeFiles/hosptech.dir/src/main.cpp.o -o bin/hosptech 

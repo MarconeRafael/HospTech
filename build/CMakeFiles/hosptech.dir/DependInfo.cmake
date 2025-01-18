@@ -9,7 +9,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/m/lp1/HospTech/src/main.cpp" "CMakeFiles/hosptech.dir/src/main.cpp.o" "gcc" "CMakeFiles/hosptech.dir/src/main.cpp.o.d"
+  "/home/m/lp1/HospTech/src/menupacientes.cpp" "CMakeFiles/hosptech.dir/src/menupacientes.cpp.o" "gcc" "CMakeFiles/hosptech.dir/src/menupacientes.cpp.o.d"
+  "/home/m/lp1/HospTech/src/menuprincipal.cpp" "CMakeFiles/hosptech.dir/src/menuprincipal.cpp.o" "gcc" "CMakeFiles/hosptech.dir/src/menuprincipal.cpp.o.d"
   "/home/m/lp1/HospTech/src/pacientes.cpp" "CMakeFiles/hosptech.dir/src/pacientes.cpp.o" "gcc" "CMakeFiles/hosptech.dir/src/pacientes.cpp.o.d"
+  "/home/m/lp1/HospTech/src/usuario.cpp" "CMakeFiles/hosptech.dir/src/usuario.cpp.o" "gcc" "CMakeFiles/hosptech.dir/src/usuario.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

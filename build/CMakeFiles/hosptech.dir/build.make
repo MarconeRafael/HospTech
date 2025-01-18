@@ -83,10 +83,52 @@ CMakeFiles/hosptech.dir/src/pacientes.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hosptech.dir/src/pacientes.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/m/lp1/HospTech/src/pacientes.cpp -o CMakeFiles/hosptech.dir/src/pacientes.cpp.s
 
+CMakeFiles/hosptech.dir/src/menupacientes.cpp.o: CMakeFiles/hosptech.dir/flags.make
+CMakeFiles/hosptech.dir/src/menupacientes.cpp.o: /home/m/lp1/HospTech/src/menupacientes.cpp
+CMakeFiles/hosptech.dir/src/menupacientes.cpp.o: CMakeFiles/hosptech.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/m/lp1/HospTech/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hosptech.dir/src/menupacientes.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hosptech.dir/src/menupacientes.cpp.o -MF CMakeFiles/hosptech.dir/src/menupacientes.cpp.o.d -o CMakeFiles/hosptech.dir/src/menupacientes.cpp.o -c /home/m/lp1/HospTech/src/menupacientes.cpp
+
+CMakeFiles/hosptech.dir/src/menupacientes.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hosptech.dir/src/menupacientes.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/m/lp1/HospTech/src/menupacientes.cpp > CMakeFiles/hosptech.dir/src/menupacientes.cpp.i
+
+CMakeFiles/hosptech.dir/src/menupacientes.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hosptech.dir/src/menupacientes.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/m/lp1/HospTech/src/menupacientes.cpp -o CMakeFiles/hosptech.dir/src/menupacientes.cpp.s
+
+CMakeFiles/hosptech.dir/src/menuprincipal.cpp.o: CMakeFiles/hosptech.dir/flags.make
+CMakeFiles/hosptech.dir/src/menuprincipal.cpp.o: /home/m/lp1/HospTech/src/menuprincipal.cpp
+CMakeFiles/hosptech.dir/src/menuprincipal.cpp.o: CMakeFiles/hosptech.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/m/lp1/HospTech/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hosptech.dir/src/menuprincipal.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hosptech.dir/src/menuprincipal.cpp.o -MF CMakeFiles/hosptech.dir/src/menuprincipal.cpp.o.d -o CMakeFiles/hosptech.dir/src/menuprincipal.cpp.o -c /home/m/lp1/HospTech/src/menuprincipal.cpp
+
+CMakeFiles/hosptech.dir/src/menuprincipal.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hosptech.dir/src/menuprincipal.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/m/lp1/HospTech/src/menuprincipal.cpp > CMakeFiles/hosptech.dir/src/menuprincipal.cpp.i
+
+CMakeFiles/hosptech.dir/src/menuprincipal.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hosptech.dir/src/menuprincipal.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/m/lp1/HospTech/src/menuprincipal.cpp -o CMakeFiles/hosptech.dir/src/menuprincipal.cpp.s
+
+CMakeFiles/hosptech.dir/src/usuario.cpp.o: CMakeFiles/hosptech.dir/flags.make
+CMakeFiles/hosptech.dir/src/usuario.cpp.o: /home/m/lp1/HospTech/src/usuario.cpp
+CMakeFiles/hosptech.dir/src/usuario.cpp.o: CMakeFiles/hosptech.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/m/lp1/HospTech/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/hosptech.dir/src/usuario.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hosptech.dir/src/usuario.cpp.o -MF CMakeFiles/hosptech.dir/src/usuario.cpp.o.d -o CMakeFiles/hosptech.dir/src/usuario.cpp.o -c /home/m/lp1/HospTech/src/usuario.cpp
+
+CMakeFiles/hosptech.dir/src/usuario.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hosptech.dir/src/usuario.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/m/lp1/HospTech/src/usuario.cpp > CMakeFiles/hosptech.dir/src/usuario.cpp.i
+
+CMakeFiles/hosptech.dir/src/usuario.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hosptech.dir/src/usuario.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/m/lp1/HospTech/src/usuario.cpp -o CMakeFiles/hosptech.dir/src/usuario.cpp.s
+
 CMakeFiles/hosptech.dir/src/main.cpp.o: CMakeFiles/hosptech.dir/flags.make
 CMakeFiles/hosptech.dir/src/main.cpp.o: /home/m/lp1/HospTech/src/main.cpp
 CMakeFiles/hosptech.dir/src/main.cpp.o: CMakeFiles/hosptech.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/m/lp1/HospTech/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hosptech.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/m/lp1/HospTech/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/hosptech.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hosptech.dir/src/main.cpp.o -MF CMakeFiles/hosptech.dir/src/main.cpp.o.d -o CMakeFiles/hosptech.dir/src/main.cpp.o -c /home/m/lp1/HospTech/src/main.cpp
 
 CMakeFiles/hosptech.dir/src/main.cpp.i: cmake_force
@@ -100,16 +142,22 @@ CMakeFiles/hosptech.dir/src/main.cpp.s: cmake_force
 # Object files for target hosptech
 hosptech_OBJECTS = \
 "CMakeFiles/hosptech.dir/src/pacientes.cpp.o" \
+"CMakeFiles/hosptech.dir/src/menupacientes.cpp.o" \
+"CMakeFiles/hosptech.dir/src/menuprincipal.cpp.o" \
+"CMakeFiles/hosptech.dir/src/usuario.cpp.o" \
 "CMakeFiles/hosptech.dir/src/main.cpp.o"
 
 # External object files for target hosptech
 hosptech_EXTERNAL_OBJECTS =
 
 bin/hosptech: CMakeFiles/hosptech.dir/src/pacientes.cpp.o
+bin/hosptech: CMakeFiles/hosptech.dir/src/menupacientes.cpp.o
+bin/hosptech: CMakeFiles/hosptech.dir/src/menuprincipal.cpp.o
+bin/hosptech: CMakeFiles/hosptech.dir/src/usuario.cpp.o
 bin/hosptech: CMakeFiles/hosptech.dir/src/main.cpp.o
 bin/hosptech: CMakeFiles/hosptech.dir/build.make
 bin/hosptech: CMakeFiles/hosptech.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/m/lp1/HospTech/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable bin/hosptech"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/m/lp1/HospTech/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable bin/hosptech"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hosptech.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

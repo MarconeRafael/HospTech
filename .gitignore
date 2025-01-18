@@ -31,3 +31,8 @@
 *.out
 *.app
 *.csv
+
+.vscode/
+build/
+data/
+

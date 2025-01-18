@@ -5,7 +5,7 @@
 
 int main() {
     GerenciamentoPacientes gerenciamentoPacientes;
-    std::string nomeArquivo = "pacientes.csv"; // Nome padrão para persistência
+    std::string nomeArquivo = "../data/pacientes.csv"; // Caminho relativo para salvar em 'data'
     int opcaoPrincipal;
 
     do {

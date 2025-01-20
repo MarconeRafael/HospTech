@@ -4,6 +4,7 @@
 #include <iostream>
 #include "usuario.h"
 
+
 void exibirMenuAdmin();
 void exibirMenuMedico();
 void exibirMenuEnfermeiro();

@@ -12,11 +12,13 @@ include_directories(include)
 
 # Adicionar os arquivos de código-fonte
 set(SOURCES
+    src/inventario.cpp
     src/pacientes.cpp
     src/menupacientes.cpp
     src/menuprincipal.cpp
     src/usuario.cpp
     src/main.cpp
+    src/menuadmin.cpp
 )
 
 # Definir o diretório de saída para os binários

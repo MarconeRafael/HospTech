@@ -3,6 +3,7 @@
 #include "pacientes.h"
 #include "menupacientes.h"
 #include "menuprincipal.h"
+#include "menuadmin.h"
 
 int main() {
     GerenciamentoPacientes gerenciamentoPacientes;
@@ -87,6 +88,7 @@ int main() {
                     std::cout << "Você não tem permissão para acessar o gerenciamento de pacientes.\n";
                 }
                 break;
+
             case 0:
                 std::cout << "Saindo do sistema...\n";
                 break;

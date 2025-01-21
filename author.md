@@ -107,7 +107,7 @@ Preencha os itens que você implementou, indicando qual a nota esperada para cad
 |----------------------------------------------------|-----------|-----------------------------------------------------------------------------------------------|
 | Gerenciar registro de pacientes                    | Sim       | Criar classes `Paciente` e `GestorPacientes`. Implementar funções para adicionar, editar e listar. |
 | Gerenciar registro de faturamento                  | Não       | Criar classe `Financeiro`. Gerenciar cobranças e pagamentos por paciente.                     |
-| Gerenciar registro de inventário médico            | Não       | Criar classe `Inventario`. Registrar, buscar e atualizar itens do estoque.                    |
+| Gerenciar registro de inventário médico            | Sim       | Criar classe `Inventario`. Registrar, buscar e atualizar itens do estoque.                    |
 | Logins de diferentes níveis de acesso              | Sim       | Criar classe `Usuario` com níveis de acesso e autenticação.                                    |
 | Área de pagamento                                  | Não       | Integrar com o módulo financeiro e gerar recibos.                                             |
 | Contabiliza e acumula os pontos de várias partidas | Não       | Implementar função de relatório para visualização de estatísticas do hospital.                |

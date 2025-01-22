@@ -23,11 +23,14 @@ class Inventario {
 public:
     void adicionarItem(const Item& item);
     void atualizarItem(const std::string& nome, int quantidade);
-    void buscarItem(const std::string& nome); 
+    void buscarItem(const std::string& nome);
     void listarItens() const;
+    void salvarInventario() const;
+    void carregarInventario();
 
 private:
     std::vector<Item> itens;
+    const std::string caminhoArquivo = "data/inventario.csv";
 };
 
 #endif // INVENTARIO_H

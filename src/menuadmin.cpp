@@ -1,9 +1,11 @@
 #include "menuadmin.h"
+#include "inventario.h"
 #include <iostream>
 #include <string>
 #include <limits>
 void MenuAdmin::exibirMenu() {
    
+    inventario.carregarInventario();
     int opcao = 0;
 
     

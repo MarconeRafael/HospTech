@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "usuario.h"
+#include "agendamentos.h"
 
 
 void exibirMenuAdmin();
@@ -13,5 +14,6 @@ void exibirMenuFarmaceutico();
 void exibirMenuPaciente();
 void exibirMenuAuditor();
 void exibirMenuPrincipal(const Usuario& usuario);
+void gerenciarAgendamentos(Agenda& agenda);
 
 #endif // MENU_PRINCIPAL_H

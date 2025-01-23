@@ -1,6 +1,9 @@
 #include <iostream>
 #include "usuario.h"
+#include "agendamentos.h"
 #include "menuadmin.h"
+#include "menuprincipal.h"
+#include <limits>
 void exibirMenuAdmin() {
     MenuAdmin menuadmin; //redireciona para o menu admin
     menuadmin.exibirMenu();
@@ -24,12 +27,37 @@ void exibirMenuEnfermeiro() {
 }
 
 void exibirMenuRecepcionista() {
-    std::cout << "================ HOSPTECH - Menu Recepcionista ================\n";
-    std::cout << "4. Controle de Agendamentos\n";
-    std::cout << "0. Sair\n";
-    std::cout << "========================================================\n";
-    std::cout << "Escolha uma opção: ";
-}
+    Agenda agenda;
+    agenda.carregarAgendamentos();
+    int opcao = 0;
+
+    do {
+        std::cout << "================ HOSPTECH - Menu Recepcionista ================\n";
+        std::cout << "1. Controle de Agendamentos\n";
+        std::cout << "0. Sair\n";
+        std::cout << "========================================================\n";
+        std::cout << "Escolha uma opção: ";
+        std::cin >> opcao;
+        if (std::cin.fail()) { 
+                std::cin.clear();// Limpar o estado de erro caso seja digitado um algarismo
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cout << "Entrada inválida. Digite um numero!\n"; 
+                continue; 
+        }
+        switch (opcao) {
+            case 1:
+                agenda.gerenciarAgendamentos(agenda);
+                break;
+            case 0: 
+                    std::cout << "Saindo...\n"; 
+                    break;
+                default:
+                    std::cout << "Opção inválida. Tente novamente.\n";
+        } 
+    }while (opcao != 0);
+    
+} 
+
 
 void exibirMenuFarmaceutico() {
     std::cout << "================ HOSPTECH - Menu Farmacêutico ================\n";

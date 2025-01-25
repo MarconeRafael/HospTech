@@ -7,15 +7,18 @@
 class Agendamento {
 public:
     Agendamento();
-    Agendamento(const std::string& paciente, const std::string& data, const std::string& hora, const std::string& tipo);
+    Agendamento(const std::string& paciente, const std::string& cpf, const std::string& data, const std::string& hora, const std::string& tipo);
 
     std::string getPaciente() const;
+    std::string getCPF() const;
     std::string getData() const;
     std::string getHora() const;
     std::string getTipo() const;
 
+
 private:
     std::string paciente;
+    std::string cpf;
     std::string data;
     std::string hora;
     std::string tipo;
@@ -28,9 +31,8 @@ public:
     void salvarAgendamentos() const;
     void carregarAgendamentos();
     void gerenciarAgendamentos(Agenda& agenda);
-    void excluirAgendamento(const std::string& paciente, const std::string& data, const std::string& hora);
-
-    void atualizarAgendamento(const std::string& paciente, const Agendamento& novoAgendamento);
+    void excluirAgendamento(const std::string& cpf, const std::string& data, const std::string& hora);
+    void atualizarAgendamento(const std::string& cpf, const std::string& novaData, const std::string& novaHora);
 
 private:
     std::vector<Agendamento> agendamentos;

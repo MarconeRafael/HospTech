@@ -1,11 +1,14 @@
 #include "menuadmin.h"
 #include "inventario.h"
+#include "agendamentos.h"
 #include <iostream>
 #include <string>
 #include <limits>
 void MenuAdmin::exibirMenu() {
    
     inventario.carregarInventario();
+    Agenda agenda;
+    agenda.carregarAgendamentos();
     int opcao = 0;
 
     
@@ -39,7 +42,7 @@ void MenuAdmin::exibirMenu() {
                 gerenciarInventario();
                 break;
             case 4:
-        
+                agenda.gerenciarAgendamentos(agenda);
                 break;
             case 5:
                 

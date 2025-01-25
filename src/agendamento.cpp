@@ -5,15 +5,17 @@
 #include <algorithm>
 #include <limits>
 
-Agendamento::Agendamento() : paciente(""), data(""), hora(""), tipo("") {}
+Agendamento::Agendamento() : paciente(""), cpf(""), data(""), hora(""), tipo("") {}
 
-Agendamento::Agendamento(const std::string& paciente, const std::string& data, const std::string& hora, const std::string& tipo)
-    : paciente(paciente), data(data), hora(hora), tipo(tipo) {}
+Agendamento::Agendamento(const std::string& paciente, const std::string& cpf, const std::string& data, const std::string& hora, const std::string& tipo)
+    : paciente(paciente), cpf(cpf), data(data), hora(hora), tipo(tipo) {}
 
 std::string Agendamento::getPaciente() const {
     return paciente;
 }
-
+std::string Agendamento::getCPF() const {
+    return cpf;
+}
 std::string Agendamento::getData() const {
     return data;
 }
@@ -36,7 +38,7 @@ void Agenda::adicionarAgendamento(const Agendamento& agendamento) {
 }
 void Agenda::listarAgendamentos() const {
     for (const auto& agendamento : agendamentos) {
-        std::cout << "Paciente: " << agendamento.getPaciente() << ", Data: " << agendamento.getData() << ", Hora: " << agendamento.getHora() << ", Tipo: " << agendamento.getTipo() << std::endl;
+        std::cout << "Paciente: " << agendamento.getPaciente() << ", CPF: " << agendamento.getCPF() << ", Data: " << agendamento.getData() << ", Hora: " << agendamento.getHora() << ", Tipo: " << agendamento.getTipo() << std::endl;
     }
 }
 
@@ -44,7 +46,7 @@ void Agenda::salvarAgendamentos() const {
     std::ofstream arquivo(caminhoArquivo);
     if (arquivo.is_open()) {
         for (const auto& agendamento : agendamentos) {
-            arquivo << agendamento.getPaciente() << "," << agendamento.getData() << "," << agendamento.getHora() << "," << agendamento.getTipo() << "\n";
+            arquivo << agendamento.getPaciente() << "," << agendamento.getCPF() << "," << agendamento.getData() << "," << agendamento.getHora() << "," << agendamento.getTipo() << "\n";
         }
         arquivo.close();
     } else {
@@ -58,12 +60,13 @@ void Agenda::carregarAgendamentos() {
         std::string linha;
         while (std::getline(arquivo, linha)) {
             std::stringstream ss(linha);
-            std::string paciente, data, hora, tipo;
+            std::string paciente, cpf, data, hora, tipo;
             std::getline(ss, paciente, ',');
+            std::getline(ss, cpf, ',');
             std::getline(ss, data, ',');
             std::getline(ss, hora, ',');
             std::getline(ss, tipo);
-            agendamentos.push_back(Agendamento(paciente, data, hora, tipo));
+            agendamentos.push_back(Agendamento(paciente, cpf, data, hora, tipo));
         }
         arquivo.close();
     } else {
@@ -72,9 +75,9 @@ void Agenda::carregarAgendamentos() {
 
 
 }
-void Agenda::excluirAgendamento(const std::string& paciente, const std::string& data, const std::string& hora) {
-    auto it = std::remove_if(agendamentos.begin(), agendamentos.end(), [&paciente, &data, &hora](const Agendamento& agendamento) {
-        return agendamento.getPaciente() == paciente && agendamento.getData() == data && agendamento.getHora() == hora;
+void Agenda::excluirAgendamento(const std::string& cpf, const std::string& data, const std::string& hora) {
+    auto it = std::remove_if(agendamentos.begin(), agendamentos.end(), [&cpf, &data, &hora](const Agendamento& agendamento) {
+        return agendamento.getCPF() == cpf && agendamento.getData() == data && agendamento.getHora() == hora;
     });
 
     if (it != agendamentos.end()) {
@@ -86,10 +89,10 @@ void Agenda::excluirAgendamento(const std::string& paciente, const std::string& 
     }
 }
 
-void Agenda::atualizarAgendamento(const std::string& paciente, const Agendamento& novoAgendamento) {
+void Agenda::atualizarAgendamento(const std::string& cpf, const std::string& novaData, const std::string& novaHora) {
     for (auto& agendamento : agendamentos) {
-        if (agendamento.getPaciente() == paciente) {
-            agendamento = novoAgendamento;
+        if (agendamento.getCPF() == cpf) {
+            agendamento = Agendamento(agendamento.getPaciente(), cpf, novaData, novaHora, agendamento.getTipo());
             salvarAgendamentos();
             std::cout << "Agendamento atualizado com sucesso!" << std::endl;
             return;
@@ -97,6 +100,7 @@ void Agenda::atualizarAgendamento(const std::string& paciente, const Agendamento
     }
     std::cerr << "Agendamento não encontrado!" << std::endl;
 }
+
 bool Agenda::verificarConflito(const std::string& data, const std::string& hora, const std::string& tipo) const {
     for (const auto& agendamento : agendamentos) {
         if (agendamento.getData() == data && agendamento.getHora() == hora && agendamento.getTipo() == tipo) {
@@ -122,13 +126,15 @@ void Agenda::gerenciarAgendamentos(Agenda& agenda) {
             std::cout << "Entrada inválida. Digite um numero!\n"; 
             continue; 
         }
-        std::string paciente, data, hora, tipo;
+        std::string paciente, cpf, data, hora, tipo;
         
         bool pacienteEncontrado = false;
         switch (opcao) {
             case 1:
                 std::cout << "Nome do paciente: ";
                 std::getline(std::cin >> std::ws, paciente);
+                std::cout << "CPF do paciente: ";
+                std::getline(std::cin, cpf);
                 std::cout << "Data (DD/MM/AAAA): ";
                 std::getline(std::cin, data);
                 std::cout << "Hora (HH:MM): ";
@@ -136,25 +142,25 @@ void Agenda::gerenciarAgendamentos(Agenda& agenda) {
                 std::cout << "Tipo (Consulta/Exame): ";
                 std::getline(std::cin, tipo);
 
-                agenda.adicionarAgendamento(Agendamento(paciente, data, hora, tipo));
+                agenda.adicionarAgendamento(Agendamento(paciente, cpf, data, hora, tipo));
                 break;
             case 2:
                 agenda.listarAgendamentos();
                 break;
             case 3:
-                std::cout << "Nome do paciente: ";
-                std::getline(std::cin >> std::ws, paciente);
+                std::cout << "CPF do paciente: ";
+                std::getline(std::cin >> std::ws, cpf);
                 std::cout << "Data (DD/MM/AAAA): ";
                 std::getline(std::cin, data);
                 std::cout << "Hora (HH:MM): ";
                 std::getline(std::cin, hora);
-                agenda.excluirAgendamento(paciente, data, hora);
+                agenda.excluirAgendamento(cpf, data, hora);
                 break;
             case 4:
-                std::cout << "Nome do paciente: ";
-                std::getline(std::cin >> std::ws, paciente);
+                std::cout << "CPF do paciente: ";
+                std::cin >> cpf;
                 for (const auto& agendamento : agenda.agendamentos) {
-                    if (agendamento.getPaciente() == paciente) {
+                    if (agendamento.getCPF() == cpf) {
                         pacienteEncontrado = true;
                         break;
                     }
@@ -163,13 +169,11 @@ void Agenda::gerenciarAgendamentos(Agenda& agenda) {
                     std::cerr << "Paciente não encontrado!" << std::endl;
                     break;
                 }
-                std::cout << "Data (DD/MM/AAAA): ";
+                std::cout << "Nova data (DD/MM/AAAA): ";
                 std::cin >> data;
-                std::cout << "Hora (HH:MM): ";
+                std::cout << "Nova hora (HH:MM): ";
                 std::cin >> hora;
-                std::cout << "Tipo (Consulta/Exame): ";
-                std::cin >> tipo;
-                agenda.atualizarAgendamento(paciente, Agendamento(paciente, data, hora, tipo));
+                atualizarAgendamento(cpf, data, hora);
                 break;
             case 5:
                 std::cout << "Voltando ao Menu Principal...\n";

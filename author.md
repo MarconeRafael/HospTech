@@ -120,7 +120,7 @@ Preencha os itens que você implementou, indicando qual a nota esperada para cad
 | Dashboard para Administradores                     | Não       | Criar interface para visualização rápida de informações importantes, como ocupação e receitas. |
 | Controle de Funcionários                           | Não       | Gerenciar cadastro e permissões dos profissionais de saúde.                                   |
 | Integração com APIs Externas                       | Não       | Permitir integração com APIs de fornecedores ou sistemas externos.                            |
-| Auditoria e Logs                                   | Não       | Registrar todas as atividades realizadas no sistema.                                          |
+| Auditoria e Logs                                   | Sim       | Registrar todas as atividades realizadas no sistema.                                          |
 | Agendamento Automático de Consultas                | Não       | Implementar sugestões de horários disponíveis com base na agenda dos profissionais.           |
 | Gestão de Medicamentos Controlados                 | Não       | Incluir controle especial para medicamentos de alta restrição, com permissões específicas.    |
 | Histórico de Alterações nos Registros              | Não       | Permitir visualizar alterações feitas em registros.                                           |

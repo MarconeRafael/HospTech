@@ -1,5 +1,6 @@
 #include <iostream>
 #include "pacientes.h"
+#include "auditoria.h"
 
 void exibirMenuPacientes() {
     std::cout << "============= GERENCIAMENTO DE PACIENTES =============\n";
@@ -17,7 +18,7 @@ void exibirMenuPacientes() {
 
 void menuPacientes(GerenciamentoPacientes& gerenciamentoPacientes, const std::string& nomeArquivo) {
     int opcaoPacientes;
-
+    Auditoria auditoria;
     do {
         exibirMenuPacientes();
         std::cin >> opcaoPacientes;
@@ -46,6 +47,7 @@ void menuPacientes(GerenciamentoPacientes& gerenciamentoPacientes, const std::st
                 gerenciamentoPacientes.adicionarPaciente(paciente);
 
                 std::cout << "Paciente adicionado com sucesso!\n";
+                auditoria.registrarAtividade("Adicinando paciente!");
                 break;
             }
             case 2: {
@@ -62,6 +64,7 @@ void menuPacientes(GerenciamentoPacientes& gerenciamentoPacientes, const std::st
                                   << ", Gênero: " << paciente.getGenero() << "\n";
                     }
                 }
+                auditoria.registrarAtividade("Listando agendamentos!");
                 break;
             }
             case 3: {
@@ -81,6 +84,7 @@ void menuPacientes(GerenciamentoPacientes& gerenciamentoPacientes, const std::st
                 } catch (const std::invalid_argument& e) {
                     std::cerr << "Erro: " << e.what() << "\n";
                 }
+                auditoria.registrarAtividade("Buscando pacientes por CPF...");
                 break;
             }
             case 4: {
@@ -102,7 +106,7 @@ void menuPacientes(GerenciamentoPacientes& gerenciamentoPacientes, const std::st
                     std::cout << "Digite a nova idade (ou -1 para manter): ";
                     std::cin >> novaIdade;
 
-                    std::cout << "Digite o novo gênero (ou pressione Enter para manter): ";
+                    std::cout << "Digite o novo genero (ou pressione Enter para manter): ";
                     std::cin.ignore();
                     std::getline(std::cin, novoGenero);
 
@@ -115,6 +119,7 @@ void menuPacientes(GerenciamentoPacientes& gerenciamentoPacientes, const std::st
                 } catch (const std::invalid_argument& e) {
                     std::cerr << "Erro: " << e.what() << "\n";
                 }
+                auditoria.registrarAtividade("Buscando pacientes editado por CPF...");
                 break;
             }
             case 5: {
@@ -130,6 +135,7 @@ void menuPacientes(GerenciamentoPacientes& gerenciamentoPacientes, const std::st
                 } catch (const std::invalid_argument& e) {
                     std::cerr << "Erro: " << e.what() << "\n";
                 }
+                auditoria.registrarAtividade("Removendo paciente!");
                 break;
             }
             case 6: {
@@ -140,6 +146,7 @@ void menuPacientes(GerenciamentoPacientes& gerenciamentoPacientes, const std::st
                 } catch (const std::runtime_error& e) {
                     std::cerr << "Erro: " << e.what() << "\n";
                 }
+                auditoria.registrarAtividade("Carregando pacientes do arquivo...");
                 break;
             }
             case 7: {
@@ -150,6 +157,7 @@ void menuPacientes(GerenciamentoPacientes& gerenciamentoPacientes, const std::st
                 } catch (const std::runtime_error& e) {
                     std::cerr << "Erro: " << e.what() << "\n";
                 }
+                auditoria.registrarAtividade("Salvando pacientes no arquivo!");
                 break;
             }
             case 0:

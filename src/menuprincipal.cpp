@@ -28,6 +28,7 @@ void exibirMenuEnfermeiro() {
 
 void exibirMenuRecepcionista() {
     Agenda agenda;
+
     agenda.carregarAgendamentos();
     int opcao = 0;
 
@@ -84,10 +85,7 @@ void exibirMenuAuditor() {
 }
 
 void exibirMenuPrincipal(const Usuario& usuario) {
-    std::cout << "================ HOSPTECH - Menu Principal ================\n";
-    std::cout << "7. Sistema de Autenticação\n";
-    std::cout << "0. Sair\n";
-    std::cout << "===========================================================\n";
+   
 
     switch (usuario.get_nivel_acesso()) {
         case NivelAcesso::ADMIN:
@@ -115,6 +113,10 @@ void exibirMenuPrincipal(const Usuario& usuario) {
             std::cout << "Erro: Nível de acesso desconhecido!\n";
             break;
     }
+    std::cout << "================ HOSPTECH - Menu Principal ================\n";
+    std::cout << "7. Sistema de Autenticação\n";
+    std::cout << "0. Sair\n";
+    std::cout << "===========================================================\n";
     std::cout << "Escolha uma opção: ";
 }
 

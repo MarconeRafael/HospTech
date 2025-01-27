@@ -1,6 +1,7 @@
 #include <iostream>
 #include "usuario.h"
 #include "pacientes.h"
+#include "auditoria.h"
 #include "menupacientes.h"
 #include "menuprincipal.h"
 #include "menuadmin.h"
@@ -8,6 +9,7 @@
 int main() {
     GerenciamentoPacientes gerenciamentoPacientes;
     std::string nomeArquivo = "../data/pacientes.csv";  // Caminho relativo para salvar em 'data'
+    Auditoria auditoria;
 
     // Etapa 1: Escolher entre login ou cadastro
     int opcaoAutenticacao;
@@ -59,6 +61,7 @@ int main() {
             if (cadastroRealizado) {
                 std::cout << "Cadastro realizado com sucesso!\n";
                 usuarioAutenticado = autenticar_usuario(username, password);  // Logar automaticamente após o cadastro
+                auditoria.registrarAtividade("Paciente cadastrado!" + username);
             } else {
                 std::cout << "Erro ao realizar o cadastro. Tente novamente.\n";
             }

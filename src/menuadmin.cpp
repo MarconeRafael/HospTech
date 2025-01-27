@@ -1,16 +1,22 @@
 #include "menuadmin.h"
 #include "inventario.h"
 #include "agendamentos.h"
+#include "auditoria.h"
+#include "menupacientes.h"
 #include <iostream>
 #include <string>
 #include <limits>
 void MenuAdmin::exibirMenu() {
-   
+    Auditoria auditoria;
+    auditoria.carregarAtividades();
+
     inventario.carregarInventario();
     Agenda agenda;
     agenda.carregarAgendamentos();
     int opcao = 0;
 
+    GerenciamentoPacientes gerenciamentoPacientes; // Crie um objeto GerenciamentoPacientes
+    std::string nomeArquivo =  "../data/pacientes.csv";
     
     do {
        std::cout << "================ HOSPTECH - Menu Admin ================\n";
@@ -19,8 +25,9 @@ void MenuAdmin::exibirMenu() {
         std::cout << "3. Controle de Inventário Médico\n";
         std::cout << "4. Controle de Agendamentos\n";
         std::cout << "5. Controle de Leitos\n";
-        std::cout << "6. Gestão de Prescrições Eletrônicas (PEP)\n";
-        std::cout << "7. Sistema de Autenticação\n";
+        std::cout << "6. Auditoria e Logs\n";
+        std::cout << "7. Gestão de Prescrições Eletrônicas (PEP)\n";
+        std::cout << "8. Sistema de Autenticação\n";
         std::cout << "0. Sair\n";
         std::cout << "========================================================\n";
         std::cout << "Escolha uma opção: ";
@@ -33,7 +40,8 @@ void MenuAdmin::exibirMenu() {
         }
         switch (opcao) {
             case 1:
-                
+                exibirMenuPacientes();
+                menuPacientes(gerenciamentoPacientes, nomeArquivo);
                 break;
             case 2:
                 
@@ -48,9 +56,12 @@ void MenuAdmin::exibirMenu() {
                 
                 break;
             case 6:
-                
+                auditoria.listarAtividades();
                 break;
             case 7:
+                
+                break;
+            case 8:
                 
                 break;
             case 0: 
@@ -65,7 +76,8 @@ void MenuAdmin::exibirMenu() {
 
 void MenuAdmin::gerenciarInventario() {
     int opcao = 0;
-    
+    Auditoria auditoria;
+   
     do {
         std::cout << "Gerenciamento de Inventário Médico\n";
         std::cout << "1. Adicionar Item\n";
@@ -101,6 +113,7 @@ void MenuAdmin::gerenciarInventario() {
                 std::cout << "Descrição: ";
                 std::getline(std::cin, descricao);
                 inventario.adicionarItem(Item(nome, quantidade, descricao));
+                auditoria.registrarAtividade("Adicionado item: " + nome);
                 break;
             case 2:
                 std::cout << "Nome do item: ";
@@ -114,17 +127,21 @@ void MenuAdmin::gerenciarInventario() {
                     break; 
                 }
                 inventario.atualizarItem(nome, quantidade);
+                auditoria.registrarAtividade("Atualizando item: " + nome);
                 break;
             case 3:
                 std::cout << "Nome do item: ";
                 std::cin >> nome;
                 inventario.buscarItem(nome);
+                auditoria.registrarAtividade("Buscado item: " + nome);
                 break;
             case 4:
                 inventario.listarItens();
+                auditoria.registrarAtividade("Listados itens do inventário");
                 break;
             case 5:
                 std::cout << "Voltando ao Menu Admin...\n";
+                auditoria.registrarAtividade("Voltando ao Menu Admin");
                 break;
             default:
                 std::cout << "Opção inválida. Tente novamente.\n";

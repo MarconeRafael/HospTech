@@ -1,4 +1,5 @@
 #include "agendamentos.h"
+#include "auditoria.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -110,6 +111,7 @@ bool Agenda::verificarConflito(const std::string& data, const std::string& hora,
     return false;
 }
 void Agenda::gerenciarAgendamentos(Agenda& agenda) {
+    Auditoria auditoria;
     int opcao = 0;
     do {
         std::cout << "Controle de Agendamentos\n";
@@ -143,9 +145,11 @@ void Agenda::gerenciarAgendamentos(Agenda& agenda) {
                 std::getline(std::cin, tipo);
 
                 agenda.adicionarAgendamento(Agendamento(paciente, cpf, data, hora, tipo));
+                auditoria.registrarAtividade("Agendando Paciente: " + cpf);
                 break;
             case 2:
                 agenda.listarAgendamentos();
+                auditoria.registrarAtividade("Listando agendamentos!");
                 break;
             case 3:
                 std::cout << "CPF do paciente: ";
@@ -155,6 +159,7 @@ void Agenda::gerenciarAgendamentos(Agenda& agenda) {
                 std::cout << "Hora (HH:MM): ";
                 std::getline(std::cin, hora);
                 agenda.excluirAgendamento(cpf, data, hora);
+                auditoria.registrarAtividade("Listando agendamento do paciente: "+ cpf);
                 break;
             case 4:
                 std::cout << "CPF do paciente: ";
@@ -174,6 +179,7 @@ void Agenda::gerenciarAgendamentos(Agenda& agenda) {
                 std::cout << "Nova hora (HH:MM): ";
                 std::cin >> hora;
                 atualizarAgendamento(cpf, data, hora);
+                auditoria.registrarAtividade("Atualizando agendamento do paciente: "+ cpf);
                 break;
             case 5:
                 std::cout << "Voltando ao Menu Principal...\n";

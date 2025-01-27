@@ -12,6 +12,7 @@ include_directories(include)
 
 # Adicionar os arquivos de código-fonte
 set(SOURCES
+    src/auditoria.cpp
     src/agendamento.cpp
     src/inventario.cpp
     src/pacientes.cpp

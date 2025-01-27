@@ -111,7 +111,7 @@ Preencha os itens que você implementou, indicando qual a nota esperada para cad
 | Logins de diferentes níveis de acesso              | Sim       | Criar classe `Usuario` com níveis de acesso e autenticação.                                    |
 | Área de pagamento                                  | Não       | Integrar com o módulo financeiro e gerar recibos.                                             |
 | Contabiliza e acumula os pontos de várias partidas | Não       | Implementar função de relatório para visualização de estatísticas do hospital.                |
-| Gestão de Agendamentos                             | Não       | Criar classe `Agendamento` para consultas e exames.                                           |
+| Gestão de Agendamentos                             | Sim       | Criar classe `Agendamento` para consultas e exames.                                           |
 | Controle de Leitos                                 | Não       | Implementar monitoramento de ocupação e liberação de leitos.                                  |
 | Prontuário Eletrônico do Paciente (PEP)            | Não       | Criar classe para histórico médico e consultas.                                               |
 | Gestão de Prescrições Eletrônicas                  | Não       | Registrar e gerenciar prescrições associadas aos pacientes.                                   |
